@@ -17,6 +17,7 @@ type NewPlayer = {
 };
 
 // specifying custom type as a param and returning a custom type
+// here we have create player and new player type ===
 function createNewPlayer(player: CreatePlayer): NewPlayer {
     return {
         ...player,
