@@ -1,0 +1,23 @@
+{
+    "name": "tsprimer",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "(npx parcel ./index.html) & npx parcel watch ./index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chandanch/tsprimer.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/chandanch/tsprimer/issues"
+    },
+    "homepage": "https://github.com/chandanch/tsprimer#readme",
+    "devDependencies": {
+        "parcel": "^2.10.1"
+    }
+}
