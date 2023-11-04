@@ -1,6 +1,6 @@
 /**
  * Type Inference: Ability of TS to automatically infer the type based on the value specified
- * to the variable
+ * to the variable or constant
  */
 
 // infers the type as number
