@@ -13,3 +13,10 @@ car = {
     color: 'd',
     price: 23,
 };
+
+// Making property as optional with object type
+let article: {
+    name: string;
+    author: string;
+    url?: string;
+};
