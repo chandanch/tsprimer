@@ -45,7 +45,7 @@ const hybridCar: SportsLuxuryCar = {
     info: '3e3e',
 };
 
-// evCar just has the h name property hence TS is not able to determine the exact type for evCar
+// evCar just has the name property hence TS is not able to determine the exact type for evCar
 // In order to determine the type it must either include properties of SportsCar or LuxuryCar or both
 // const evCar: SportsLuxuryCar = {
 //     name: 'dww',
