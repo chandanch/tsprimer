@@ -39,6 +39,7 @@ const salaryProcessorOptions: Options = {
     isFileUpload: false,
 };
 
+// explict undefined if property does not exist
 interface StringByString {
     [key: string]: string | number | undefined;
 }
