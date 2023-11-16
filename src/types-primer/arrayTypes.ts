@@ -26,3 +26,20 @@ let games: Game[] = [
         ratings: 3.4,
     },
 ];
+
+type PlayerScore = {
+    name: string;
+    score: number;
+};
+
+// Using Bracket notation with specific type
+let playerScores: Array<PlayerScore> = [
+    {
+        name: 'dio',
+        score: 33,
+    },
+    {
+        name: 'chan',
+        score: 33,
+    },
+];
