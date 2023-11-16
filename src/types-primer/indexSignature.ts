@@ -46,5 +46,6 @@ interface StringByString {
 
 const object: StringByString = {};
 
+// accessing an non existing property
 const value = object['nonExistingProp'];
 console.log(value); // => undefined
