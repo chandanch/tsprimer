@@ -11,3 +11,8 @@ let errorDetails: [string, boolean, number] = ['no value provided', false, 2];
 let streamLevel: [string, number, boolean?];
 
 streamLevel = ['eww', 2];
+
+// using spread operator to specify the type for the rest of the values in tuple
+let bufferDetails: [string, number, boolean, ...string[]];
+
+bufferDetails = ['f1buffer', 2333, true, 'errr', 'main'];
