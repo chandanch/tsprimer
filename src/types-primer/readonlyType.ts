@@ -9,3 +9,11 @@ let gameLevels: readonly number[] = [1, 2, 3];
 
 // throws an error at the compile time
 // gameLevels.push(4)
+
+// creating an readonly tuple
+let gameSuits: readonly [string, boolean] = ['srr', false];
+
+// using type for creating readonly tupple
+type ReadOnlySuits = readonly [number, string, boolean];
+
+let gamersPlay: ReadOnlySuits = [12, '33.m', true];
