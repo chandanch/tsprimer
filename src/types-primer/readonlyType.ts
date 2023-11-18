@@ -17,3 +17,11 @@ let gameSuits: readonly [string, boolean] = ['srr', false];
 type ReadOnlySuits = readonly [number, string, boolean];
 
 let gamersPlay: ReadOnlySuits = [12, '33.m', true];
+
+// using Bracket notation - readonly array of string types
+type filments = Readonly<string[]>;
+
+// using Bracket notation - readonly tuples
+type gilments = Readonly<[string, boolean, number]>;
+
+let gills: gilments = ['d', true, 3];
