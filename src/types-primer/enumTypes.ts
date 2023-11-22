@@ -18,9 +18,29 @@ enum Direction {
 
 // enums without initializers
 // er would have the value 0, ww would have 1 and so on
-enum Direction {
+enum Directions {
     er,
     ww,
     rr,
     ll,
 }
+
+// string enums
+enum Roles {
+    admin = 'Admin',
+    player = 'Player',
+    composer = 'Composer',
+}
+
+// use of enum type when creating custom type or type aliasa
+type GamePlayer = {
+    name: string;
+    score: number;
+    role: Roles;
+};
+
+const samPlayer: GamePlayer = {
+    name: 'sam',
+    score: 23,
+    role: Roles.admin,
+};
