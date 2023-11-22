@@ -15,3 +15,12 @@ enum Direction {
     Left,
     Right,
 }
+
+// enums without initializers
+// er would have the value 0, ww would have 1 and so on
+enum Direction {
+    er,
+    ww,
+    rr,
+    ll,
+}
