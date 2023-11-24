@@ -16,6 +16,11 @@ function notifyGameSpawn(userName: string, score: Number, level: Number) {
 }
 
 // function with type parameters and return type specified to the function
-function notifyPlayerDisconnect(userName: string, score: Number): string {
+function notifyPlayerDisconnect(userName: string, score: number): string {
     return `Player ${userName} has disconnected Score: ${score}`;
 }
+
+// arrow functions
+const increaseScore = (score: number): number => {
+    return score + score;
+};
