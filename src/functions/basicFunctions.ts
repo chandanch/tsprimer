@@ -4,3 +4,15 @@
  * function parameters.
  * These types for the parameters are checked at the compile time when the function is invoked
  */
+
+// declaring a function in TS
+function greetings() {
+    console.log('Hello Welcome to Game');
+}
+
+// function with parameters and types specified for each parameter
+function notifyGameSpawn(userName: string, score: number, level: number) {
+    return `A New player ${userName} with best score of ${score} on level ${level} has been spawned`;
+}
+
+// function with type parameters and return type specified to the function
