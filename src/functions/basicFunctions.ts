@@ -11,8 +11,11 @@ function greetings() {
 }
 
 // function with parameters and types specified for each parameter
-function notifyGameSpawn(userName: string, score: number, level: number) {
+function notifyGameSpawn(userName: string, score: Number, level: Number) {
     return `A New player ${userName} with best score of ${score} on level ${level} has been spawned`;
 }
 
 // function with type parameters and return type specified to the function
+function notifyPlayerDisconnect(userName: string, score: Number): string {
+    return `Player ${userName} has disconnected Score: ${score}`;
+}
