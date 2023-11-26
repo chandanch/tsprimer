@@ -14,7 +14,7 @@ type GameAccount = {
     calculateCredits: (promoValue: number) => number;
 };
 
-// usage of custom type
+// usage of custom type and usage of call signature
 let samAccount: GameAccount = {
     playerName: 'dede',
     score: 323,
