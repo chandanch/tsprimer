@@ -24,3 +24,8 @@ let samAccount: GameAccount = {
         return (samAccount.score + promoValue) * samAccount.bonusPoints;
     },
 };
+
+// using an shorthand syntax
+type ReserveSlotsFn = {
+    (name: string, badge: string): string;
+};
