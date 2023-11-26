@@ -29,3 +29,32 @@ let samAccount: GameAccount = {
 type ReserveSlotsFn = {
     (name: string, badge: string): string;
 };
+
+// If some params are optional then we can make use of mutliple funnction call signatures when some params are optional
+// as shwon blow the badge property is option in BookStreamSlotFn
+type BookStreamSlotFn = {
+    (
+        playerName: string,
+        subscription: string,
+        badge: string,
+        gamePoints: number
+    ): string;
+
+    (playerName: string, subscription: string, gamePoints: number): string;
+};
+
+// implementing a function of type BookStreamSlotFn
+// here we check if the optional param is present or not
+const bookStreamSlot: BookStreamSlotFn = (
+    playerName: string,
+    subs: string,
+    badgeOrGamePoints: string | number,
+    gamePoints?: number
+) => {
+    // check tyoe of badgeOrGamePoints to determine if badge is passed or gamepoints is passed
+    if (typeof badgeOrGamePoints === 'string') {
+        return `Player ${playerName} with subscription ${subs} with badge ${badgeOrGamePoints} has ${gamePoints} gamepoints`;
+    }
+
+    return `Player ${playerName} with subscription ${subs} has ${gamePoints} gamepoints`;
+};
