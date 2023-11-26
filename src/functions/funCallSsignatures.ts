@@ -2,6 +2,7 @@
  * Function Call Signatures: Used when a property of custom type is of type function
  * Allows to specify the parameter type and return type for custom properties which would a function
  * This enables TS to check for erorrs at compile time when using the function
+ * Syntax: (Param: type) => Return Type;
  */
 
 // GameAccount has a property named calculateCredits which would be a function
