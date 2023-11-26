@@ -44,11 +44,17 @@ type BookStreamSlotFn = {
 };
 
 // implementing a function of type BookStreamSlotFn
+// here we check if the optional param is present or not
 const bookStreamSlot: BookStreamSlotFn = (
     playerName: string,
     subs: string,
     badgeOrGamePoints: string | number,
     gamePoints?: number
 ) => {
-    return '';
+    // check tyoe of badgeOrGamePoints to determine if badge is passed or gamepoints is passed
+    if (typeof badgeOrGamePoints === 'string') {
+        return `Player ${playerName} with subscription ${subs} with badge ${badgeOrGamePoints} has ${gamePoints} gamepoints`;
+    }
+
+    return `Player ${playerName} with subscription ${subs} has ${gamePoints} gamepoints`;
 };
