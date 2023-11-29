@@ -19,7 +19,7 @@ function echoData<T>(arg: T): T {
 // usage of echoData which takes a generic type param:
 // When the identity function is called, the type of the arg parameter will be
 // inferred from the type of the argument that is passed in
-const identityResult = echoData(10);
+const identityResult = echoData<number>(10);
 
 // type alias or a custom type which takes in a generic type parameter
 type Filter = {
@@ -38,3 +38,13 @@ const filter: Filter = (items, predicate) => {
 
 // here the type of filter() is inferred based on the type of values passed to the filter()
 console.log(filter([1, 2, 3, 6, 6], (item) => item > 3));
+
+// using the shorthand syntax
+type Filter2 = <T>(items: T[], predicate: (item: T) => boolean) => T[];
+
+// using a generic Type alias
+//The generic type T is defined at the type alias level (Filter3<T>).
+// This means when you use Filter3, you have to specify what T is at that point.
+type Filter3<T> = {
+    (items: T[], predicate: (item: T) => boolean): T[];
+};
