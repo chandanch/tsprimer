@@ -48,3 +48,10 @@ type Filter2 = <T>(items: T[], predicate: (item: T) => boolean) => T[];
 type Filter3<T> = {
     (items: T[], predicate: (item: T) => boolean): T[];
 };
+
+// example: generic type alias
+const filter3: Filter3<number> = (items, predicate): number[] => {
+    return [2, 4, 5];
+};
+
+console.log(filter3([3, 2], () => true));
