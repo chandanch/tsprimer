@@ -25,10 +25,13 @@ let samAccount: GameAccount = {
     },
 };
 
-// using an shorthand syntax
+// using an longhand syntax
 type ReserveSlotsFn = {
     (name: string, badge: string): string;
 };
+
+// using shorthand syntax
+type ReserveSlotsFn2 = (name: string, bage: string) => string;
 
 // If some params are optional then we can make use of mutliple funnction call signatures when some params are optional
 // as shwon blow the badge property is option in BookStreamSlotFn
