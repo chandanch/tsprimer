@@ -20,3 +20,12 @@ class Gamer {
         return `Score: ${this.score} Name: ${this.name}`;
     }
 }
+
+// create an instance or object of the class
+// this is similar to creating an actual object from the blueprint
+const samiol = new Gamer();
+
+samiol.name = "Samoil Fine"
+samiol.score = 344;
+
+console.log(samiol.showPlayerInfo());
