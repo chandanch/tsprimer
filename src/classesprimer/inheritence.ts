@@ -19,8 +19,17 @@ class User {
 // Author class which extends or inherits from User class
 // the author class inherits the name, email and age properties from User
 class Author extends User {
-    books: string[] = [];
-    genere: string = '';
+    books;
+    genere: string;
+
+    // subclass constructor
+    constructor(name: string, email: string, age: number, books: string[], genere: string) {
+        // calling the parent class or base class constructor using super()
+        // the base class constructor needs to be called when defining the constructor in subclass
+        super(name, email, age);
+        this.books = books;
+        this.genere = genere;
+    }
 }
 
 // creating an instance of Author Class
