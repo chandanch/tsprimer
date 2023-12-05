@@ -9,6 +9,7 @@ class PlayGame {
 
     // constructor method
     constructor(name: string, isStarted: boolean) {
+        // to access class members we use the `this` keyword
         this.name = name;
         this.isStarted = isStarted;
     }
