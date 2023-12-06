@@ -23,9 +23,16 @@ class Author extends User {
     genere: string;
 
     // subclass constructor
-    constructor(name: string, email: string, age: number, books: string[], genere: string) {
+    constructor(
+        name: string,
+        email: string,
+        age: number,
+        books: string[],
+        genere: string
+    ) {
         // calling the parent class or base class constructor using super()
-        // the base class constructor needs to be called when defining the constructor in subclass
+        // the base class constructor needs to be called with its required params
+        // when defining the constructor in subclass
         super(name, email, age);
         this.books = books;
         this.genere = genere;
@@ -33,7 +40,13 @@ class Author extends User {
 }
 
 // creating an instance of Author Class
-const samAuthor = new Author('Sam', 'sam@ee.com', 2);
+const samAuthor = new Author(
+    'Sam',
+    'sam@ee.com',
+    2,
+    ['nice', 'bookers', 'samer'],
+    'mudpinic'
+);
 
 // as shown below we can access the author class property (genere) as well as Parent class
 // property (age)
