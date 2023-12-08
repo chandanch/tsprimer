@@ -6,9 +6,12 @@
  */
 
 class LogManager {
-    logPath: string;
-    logLevel: string;
-    dependency: string;
+    // private member, cannot be accessed outside this class
+    private logPath: string;
+    // public member, can be accessed outside the class
+    public logLevel: string;
+    // protected member, can be accessed within class and by subclass or child class
+    protected dependency: string;
 
     constructor(logPath: string, logLevel: string, dependency: string) {
         this.logPath = logPath;
@@ -16,3 +19,5 @@ class LogManager {
         this.dependency = dependency;
     }
 }
+
+const streamLogger = new LogManager('/data', 'debug', 'nodeps');
