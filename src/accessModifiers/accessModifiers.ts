@@ -10,7 +10,8 @@ class LogManager {
     private logPath: string;
     // public member, can be accessed outside the class
     public logLevel: string;
-    dependency: string;
+    // protected member, can be accessed within class and by subclass or child class
+    protected dependency: string;
 
     constructor(logPath: string, logLevel: string, dependency: string) {
         this.logPath = logPath;
