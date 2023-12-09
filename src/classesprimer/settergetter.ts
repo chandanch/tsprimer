@@ -28,10 +28,23 @@ class Paper {
             this._paperType = papType;
         }
     }
+
+    // use of getter method to obtain the value of the private property
+    // with getter method as well we can add a validation to check if the property is initialized
+    public get refinementLevel() {
+        if (this._refinementLevel === undefined) {
+            throw new TypeError('Refinement level is not defined');
+        }
+        return this._refinementLevel;
+    }
 }
 
 const biPaper = new Paper('dee', 22);
 
 biPaper.paperType = 'filmemn';
 biPaper.convertUnits(33);
+// use of setter to set the value
 biPaper.refinementLevel = 20;
+
+// use of getter to get the value
+console.log(biPaper.refinementLevel, biPaper.paperType);
