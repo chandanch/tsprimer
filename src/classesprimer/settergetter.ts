@@ -7,7 +7,15 @@
 class Paper {
     private _refinementLevel: number | undefined;
 
-    constructor(private _paperType: string, private units: number) {}
+    constructor(private _paperType: string, private units: number) {
+        this.validatePaperType(this._paperType);
+    }
+
+    validatePaperType(paperType: string) {
+        if (paperType === '' || paperType.length < 3) {
+            throw new TypeError('Invalid paper type');
+        }
+    }
 
     convertUnits(rate: number) {
         return this.units * rate;
@@ -24,9 +32,8 @@ class Paper {
     }
 
     public set paperType(papType: string) {
-        if (papType !== '') {
-            this._paperType = papType;
-        }
+        this.validatePaperType(papType);
+        this._paperType = papType;
     }
 
     // use of getter method to obtain the value of the private property
@@ -36,6 +43,10 @@ class Paper {
             throw new TypeError('Refinement level is not defined');
         }
         return this._refinementLevel;
+    }
+
+    public get paperType() {
+        return this._paperType;
     }
 }
 
