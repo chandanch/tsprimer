@@ -9,9 +9,17 @@ class ColorGenerator {
     // creating a static member
     public static pattern: string;
 
-    getColorPattern() {
+    static getColorPattern() {
         // accessing the static member within the class
         // can only nbe accessed with Classname.membername i.e. ColorGenerator.pattern
         return ColorGenerator.pattern;
     }
 }
+
+// setting value for static property pattern
+ColorGenerator.pattern = 'ddd';
+
+// accessing static members
+console.log(ColorGenerator.pattern);
+
+ColorGenerator.getColorPattern();
