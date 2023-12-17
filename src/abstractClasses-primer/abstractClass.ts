@@ -21,4 +21,40 @@ abstract class Fogger {
 
     // protected constructor
     protected constructor(private variant: string) {}
+
+    // common method to add genomers
+    public addGenomer(genomers: Genomers) {
+        if (Array.isArray(genomers)) {
+            for (const genomer of genomers) {
+                this.genomers.push(genomer);
+            }
+        }
+    }
 }
+
+// class inheriting from abstract class
+// the dervied class must implement the abstract member genomers
+class MailFogger extends Fogger {
+    protected genomers: Genomers = [];
+}
+
+// class derviced from abstract class
+class HailFogger extends Fogger {
+    protected genomers: Genomers = [];
+
+    // defining the constructor
+    constructor(variant: string, private hailType: string) {
+        // calling the super class (abstract class) constructor
+        super(variant);
+    }
+}
+
+const hail = new HailFogger('ddd', '');
+
+// use of common method in instance of HailGenomer
+hail.addGenomer([
+    {
+        name: 'Dilik Genomer',
+        lifeSpan: 3,
+    },
+]);
