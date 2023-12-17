@@ -21,6 +21,15 @@ abstract class Fogger {
 
     // protected constructor
     protected constructor(private variant: string) {}
+
+    // common method to add genomers
+    public addGenomer(genomers: Genomers) {
+        if (Array.isArray(genomers)) {
+            for (const genomer of genomers) {
+                this.genomers.push(genomer);
+            }
+        }
+    }
 }
 
 // class inheriting from abstract class
@@ -39,3 +48,13 @@ class HailFogger extends Fogger {
         super(variant);
     }
 }
+
+const hail = new HailFogger('ddd', '');
+
+// use of common method in instance of HailGenomer
+hail.addGenomer([
+    {
+        name: 'Dilik Genomer',
+        lifeSpan: 3,
+    },
+]);
