@@ -22,3 +22,20 @@ abstract class Fogger {
     // protected constructor
     protected constructor(private variant: string) {}
 }
+
+// class inheriting from abstract class
+// the dervied class must implement the abstract member genomers
+class MailFogger extends Fogger {
+    protected genomers: Genomers = [];
+}
+
+// class derviced from abstract class
+class HailFogger extends Fogger {
+    protected genomers: Genomers = [];
+
+    // defining the constructor
+    constructor(variant: string, private hailType: string) {
+        // calling the super class (abstract class) constructor
+        super(variant);
+    }
+}
