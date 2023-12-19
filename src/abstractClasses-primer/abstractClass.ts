@@ -20,6 +20,7 @@ abstract class Fogger {
     protected abstract genomers: Genomers;
 
     // protected constructor
+    // the constructor is protected to prevent its access from instances of child class
     protected constructor(private variant: string) {}
 
     // common method to add genomers
@@ -29,6 +30,18 @@ abstract class Fogger {
                 this.genomers.push(genomer);
             }
         }
+    }
+
+    public displayGenomer(): void {
+        if (this.genomers.length === 0) {
+            console.log('No Genomers found');
+        }
+
+        this.genomers.forEach((genoer, index) => {
+            console.log(
+                `${index} + 1, Name: ${genoer.name}, LifeSpan: ${genoer.lifeSpan}`
+            );
+        });
     }
 }
 
@@ -49,7 +62,21 @@ class HailFogger extends Fogger {
     }
 }
 
-const hail = new HailFogger('ddd', '');
+class JileFogger extends Fogger {
+    protected genomers: Genomers = [];
+
+    /**
+     *
+     */
+    constructor(public jileType: string) {
+        // passing a static value to super class constructor so that we always
+        // create an instance of `jile` variant. this prevents creating an instance of JileFogger
+        // with a different variant. Always when we create an instance of JileFogger it will have the variant as jile
+        super('jile');
+    }
+}
+
+const hail = new HailFogger('ddd', 'haillers');
 
 // use of common method in instance of HailGenomer
 hail.addGenomer([
@@ -58,3 +85,8 @@ hail.addGenomer([
         lifeSpan: 3,
     },
 ]);
+
+hail.displayGenomer();
+
+// creating an instance of JileFogger
+const jile = new JileFogger('jills');
