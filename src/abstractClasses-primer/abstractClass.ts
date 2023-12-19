@@ -31,6 +31,18 @@ abstract class Fogger {
             }
         }
     }
+
+    public displayGenomer(): void {
+        if (this.genomers.length === 0) {
+            console.log('No Genomers found');
+        }
+
+        this.genomers.forEach((genoer, index) => {
+            console.log(
+                `${index} + 1, Name: ${genoer.name}, LifeSpan: ${genoer.lifeSpan}`
+            );
+        });
+    }
 }
 
 // class inheriting from abstract class
@@ -73,6 +85,8 @@ hail.addGenomer([
         lifeSpan: 3,
     },
 ]);
+
+hail.displayGenomer();
 
 // creating an instance of JileFogger
 const jile = new JileFogger('jills');
