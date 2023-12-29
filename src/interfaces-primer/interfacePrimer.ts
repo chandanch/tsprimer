@@ -43,3 +43,40 @@ const earnDim: Dimension = {
         return earnDim.height + earnDim.width;
     },
 };
+
+// class implementing interface
+/**
+ * We can use an interface with a class using the keyword implements, for example:
+ * class NameofClass implements InterfaceName {}
+ */
+
+interface WindowReSizer {
+    height: number;
+    width: number;
+    coords: {
+        xaxis: number;
+        yaxis: number;
+    };
+    isActive: boolean;
+    getWindowSpec: () => string;
+}
+
+// implemention of interface by class
+class BrowserResizer implements WindowReSizer {
+    public coords: { xaxis: number; yaxis: number };
+    public isActive: boolean;
+
+    constructor(public height: number, public width: number) {
+        this.isActive = true;
+        this.coords = { xaxis: 0, yaxis: 0 };
+    }
+
+    setCoords(xaxis: number, yaxis: number) {
+        this.coords.xaxis = xaxis;
+        this.coords.yaxis = yaxis;
+    }
+
+    getWindowSpec = () => {
+        return `Specs are ${this.height} ${this.coords.xaxis}`;
+    };
+}
