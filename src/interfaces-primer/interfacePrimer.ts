@@ -80,3 +80,27 @@ class BrowserResizer implements WindowReSizer {
         return `Specs are ${this.height} ${this.coords.xaxis}`;
     };
 }
+
+// optional members
+/**
+ * An interface can have optional properties methods which may or may not be implemented
+ * by the class or an object
+ */
+
+interface RectangleSelect {
+    angle: number;
+    rotateX: number;
+    rotateY: number;
+    // optional property
+    median?: number;
+    // optional property
+    hinge?: string;
+}
+
+// here the rectPicture obj is annotated with RectangleSelect and does not implement or
+// the optional properties
+const rectPicture: RectangleSelect = {
+    angle: 34.5,
+    rotateX: 33.222,
+    rotateY: 3.3,
+};
