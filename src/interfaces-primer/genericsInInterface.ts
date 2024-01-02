@@ -32,3 +32,15 @@ const notierCar: AutoMobile<string, number, boolean> = {
     brand: false,
     description: 'd',
 };
+
+// implementing the generic interface in a class
+class ElemCar implements AutoMobile<string, number, string> {
+    public type: string = 'ElemCar';
+
+    constructor(
+        public name: string,
+        public color: number,
+        public brand: string,
+        public description: string
+    ) {}
+}
