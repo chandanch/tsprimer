@@ -1,5 +1,9 @@
 /**
  * Inheritence: Allows a class to obtain or inherit the properties and methods from a parent class
+ *
+ * Note: A class can inherit properties and methods only from one class
+ * i.e. a class can have only one parent
+ * TS does not support multiple inheritence
  */
 
 // parent class: User
