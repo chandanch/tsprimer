@@ -62,6 +62,8 @@ interface WindowReSizer {
 }
 
 // implemention of interface by class
+// Note: All properties of a interface that is implemented in a class must be public
+// since it is used in the defining the structure of the object.
 class BrowserResizer implements WindowReSizer {
     public coords: { xaxis: number; yaxis: number };
     public isActive: boolean;
