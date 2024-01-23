@@ -10,6 +10,8 @@ function Organizer(name, category) {
     this.category = category;
 
     // method of constructor functions
+    // note: methods of the constructor function are attached directly to the object
+    // instead of attaching to its prototype
     this.displayDetails = () => {
         console.log(this.name, this.category);
     };
