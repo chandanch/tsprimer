@@ -13,6 +13,10 @@
  * up the prototype chain until it either finds the property/method or reaches
  * the end of the chain.
  *
+ *
+ * When you create an object using a constructor function, the newly created object
+ * automatically gets a prototype property linked to the constructor function's prototype
+ * object. In other words, the newly created object inherits properties from the constructor function's prototype object.
  */
 
 /**
