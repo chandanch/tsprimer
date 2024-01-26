@@ -34,3 +34,13 @@ function Albums(name, rating) {
 }
 
 const samles = new Albums('samels', 3.4);
+
+// Inheriting properties from another constructor function
+function GigAlbums(name, rating, gigs) {
+    // In order to ensure that Parent's properties are set on child object we use the
+    // apply () and pass the current constructor function i.e. GigAlbums using this since
+    // this points to constructor function i.e. GigAlbums
+    // and the other properties as an array
+    Albums.apply(this, [name, rating]);
+    this.gigs = gigs;
+}
