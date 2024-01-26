@@ -44,3 +44,9 @@ function GigAlbums(name, rating, gigs) {
     Albums.apply(this, [name, rating]);
     this.gigs = gigs;
 }
+
+// inheriting methods and properties from parent function
+// here we set the prototype property of the Child function to parent's prototype
+// This internally creates a prototype chain and enables objects of GigsAlbums to inherit
+// properties and methods from Parent prototype
+GigAlbums.prototype = Object.create(Albums.prototype);
