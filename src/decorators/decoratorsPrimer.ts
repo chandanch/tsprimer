@@ -4,9 +4,22 @@
  *
  */
 
-function ClasserDeco(fn: Function) {
-    console.log(`Executing decorator`);
+// the parameters of the decorator function varies based on where the decorator function is attached
+// decorators can be attached to class, method of a class, property of a class or to accessor property
+function decoPilot(constructor: Function) {
+    console.log('Airpilot lockeed');
+    console.log(constructor);
 }
 
-@ClasserDeco
-class Decoerme {}
+class AutoPilot {
+    constructor(public name: string, public duration: number) {}
+
+    calculateAirSpeed() {
+        const vel = 12;
+        return (vel + 2) * this.duration;
+    }
+
+    public get autopilotName() {
+        return this.name;
+    }
+}
