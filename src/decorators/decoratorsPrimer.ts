@@ -4,9 +4,12 @@
  *
  */
 
-// the parameters of the decorator function varies based on where the decorator function is attached
+// the parameters and the no. of parameters of the decorator function varies based on where the decorator function is attached
 // decorators can be attached to class, method of a class, property of a class or to accessor property
+
+// since this is attached to the class, this decorator recieves the class as the first argument
 function decoPilot(constructor: Function) {
+    // this decorator is invoked when the class is defined at the runtime
     console.log('Airpilot lockeed');
     console.log(constructor);
 }
