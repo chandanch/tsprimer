@@ -8,10 +8,18 @@ enum Manufactures {
     boeing = 'boeing',
 }
 
+interface IAirPlane {
+    name: string;
+    duration: number;
+    origin?: string;
+    manufacturer?: string;
+    type?: string;
+}
+
 function AircraftManufacturer(manufacturer: Manufactures) {
     return function (target: Function) {
         if (manufacturer === Manufactures.airbus) {
-            target.prototype.orgin = 'US';
+            target.prototype.origin = 'US';
             target.prototype.manufacturer = Manufactures.airbus;
             target.prototype.type = 'Jetter';
         } else {
@@ -23,7 +31,7 @@ function AircraftManufacturer(manufacturer: Manufactures) {
 }
 
 @AircraftManufacturer(Manufactures.airbus)
-class Airplane {
+class Airplane implements IAirPlane {
     constructor(public name: string, public duration: number) {}
 
     calculateAirSpeed() {
@@ -36,10 +44,14 @@ class Airplane {
     }
 }
 
-const filAirplane = new Airplane('Fill', 3.4);
+const filAirplane: IAirPlane = new Airplane('Fill', 3.4);
 
 // accessing the property created by the decorator function
 // since the property exists on the prototype and does not exist on the class TS throws error
-console.log(filAirplane.orgin);
+
 // The above statement prints the origin as 'US' on the console, since during the runtime, JS
 // looks for the property in the current class as well in all of its prototypes
+
+// To fix the issue specify the type of filAirplane object as IAirPlane interface type so that
+// TS can recognize that property
+console.log(filAirplane.origin);
