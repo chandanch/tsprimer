@@ -14,6 +14,8 @@ function decoPilot(constructor: Function) {
     console.log(constructor);
 }
 
+// bind decorator to the class using the @ keyword
+@decoPilot
 class AutoPilot {
     constructor(public name: string, public duration: number) {}
 
