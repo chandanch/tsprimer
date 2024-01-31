@@ -25,3 +25,5 @@ class Stubber {
         return this.name;
     }
 }
+
+const replStubber = new Stubber('Repl', 3);
