@@ -40,7 +40,6 @@ const filAirplane = new Airplane('Fill', 3.4);
 
 // accessing the property created by the decorator function
 // since the property exists on the prototype and does not exist on the class TS throws error
-// @ts-ignore
 console.log(filAirplane.orgin);
 // The above statement prints the origin as 'US' on the console, since during the runtime, JS
 // looks for the property in the current class as well in all of its prototypes
