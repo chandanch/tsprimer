@@ -14,6 +14,8 @@ interface IAirPlane {
     origin?: string;
     manufacturer?: string;
     type?: string;
+    initiateAirBus?: () => void;
+    initiateBoeing?: () => void;
 }
 
 function AircraftManufacturer(manufacturer: Manufactures) {
@@ -22,10 +24,20 @@ function AircraftManufacturer(manufacturer: Manufactures) {
             target.prototype.origin = 'US';
             target.prototype.manufacturer = Manufactures.airbus;
             target.prototype.type = 'Jetter';
+
+            // adding methods to prototype
+            target.prototype.initiateAirBus = () => {
+                console.log('Initiating Airbus');
+            };
         } else {
             target.prototype.orgin = 'FR';
             target.prototype.manufacturer = Manufactures.boeing;
             target.prototype.type = 'Planer';
+
+            // adding methods to prototype
+            target.prototype.initiateBoeing = () => {
+                console.log('Initiating Boeing');
+            };
         }
     };
 }
@@ -55,3 +67,5 @@ const filAirplane: IAirPlane = new Airplane('Fill', 3.4);
 // To fix the issue specify the type of filAirplane object as IAirPlane interface type so that
 // TS can recognize that property
 console.log(filAirplane.origin);
+
+filAirplane.initiateAirBus ? filAirplane.initiateAirBus() : 'Does not exists';
