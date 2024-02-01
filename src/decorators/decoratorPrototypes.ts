@@ -56,6 +56,20 @@ class Airplane implements IAirPlane {
     }
 }
 
+@AircraftManufacturer(Manufactures.boeing)
+class Helicoper implements IAirPlane {
+    constructor(public name: string, public duration: number) {}
+
+    calculateAirSpeed() {
+        const vel = 220;
+        return (vel + 2) * this.duration;
+    }
+
+    public get autopilotName() {
+        return this.name;
+    }
+}
+
 const filAirplane: IAirPlane = new Airplane('Fill', 3.4);
 
 // accessing the property created by the decorator function
