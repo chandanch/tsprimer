@@ -25,7 +25,7 @@
  */
 
 function ParameterDecorator(
-    target: any,
+    target: Object,
     methodName: string,
     parameterIndex: number
 ) {
