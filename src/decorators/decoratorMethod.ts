@@ -23,6 +23,7 @@ function MethodDecorator(
     console.log(classPrototype);
     console.log(methodName);
     console.log(descriptor);
+    descriptor.writable = false;
 }
 
 class AutoStubber {
