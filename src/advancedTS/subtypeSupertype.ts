@@ -33,3 +33,18 @@ const myBird: Bird = {
 };
 
 let animal: Animal = myBird; // OK, Bird is a subtype of Animal
+
+// declaration -1
+// let scores: number[] = [2, 3, 4, 5]
+
+// declaration -2
+// let scores: object = [2, 4, 5]
+
+/**
+ * In 1, Here scores is of number[] is an array type, specifically an array of numbers
+ * In 2, Here scores is of object is a more general type that represents any non-primitive value.
+ * While the assignment is syntactically valid, it's not ideal because
+ * it loses the specificity of the array type. The variable scores is of type object,
+ * which is a supertype of arrays. It would be better to use a more specific type,
+ * such as number[] or Array<number>.
+ */
