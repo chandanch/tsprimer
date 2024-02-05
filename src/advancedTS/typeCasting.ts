@@ -15,3 +15,7 @@ let someValue: any = 'Hello, TypeScript!';
 let strLength: number = (someValue as string).length;
 
 console.log(strLength); // Outputs: 17
+
+// explicitly specifying the type of scoreField as HTMLInputElement
+let scoreField = document.querySelector('#score')! as HTMLInputElement;
+console.log(scoreField.value);
