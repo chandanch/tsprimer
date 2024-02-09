@@ -8,13 +8,13 @@
 type SportsCar = {
     name: string;
     type: string;
-    revs: Number;
+    revs: number;
 };
 
 // Structure of Luxury type
 type LuxuryCar = {
     name: string;
-    seats: Number;
+    seats: number;
     info: string;
 };
 
@@ -29,12 +29,16 @@ const ciaSportsCar: SportsLuxuryCar = {
     revs: 3,
 };
 
+console.log(ciaSportsCar);
+
 // gionLuxuryCar is of LuxuryCar type since it has all the properties of luxury car
 const gionLuxuryCar: SportsLuxuryCar = {
     name: 'gion',
     seats: 3,
     info: 'ddd',
 };
+
+console.log(gionLuxuryCar);
 
 // hybrid car has all the properties of sports and luxury car
 const hybridCar: SportsLuxuryCar = {
@@ -44,6 +48,8 @@ const hybridCar: SportsLuxuryCar = {
     seats: 4,
     info: '3e3e',
 };
+
+console.log(hybridCar);
 
 // evCar just has the name property hence TS is not able to determine the exact type for evCar
 // In order to determine the type it must either include properties of SportsCar or LuxuryCar or both
