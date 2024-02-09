@@ -6,8 +6,8 @@
 // create custom type
 type Player = {
     name: string;
-    score: Number;
-    userId: Number;
+    score: number;
+    userId: number;
 };
 
 // using the custom type by specifying it as a type to a variable
