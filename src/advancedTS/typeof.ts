@@ -29,6 +29,8 @@ let anotherPerson = {
     email: 'jane@example.com',
 };
 
+//  typeof is used to extract the type of a specific property (name) of an object (anotherPerson).
+// This shows how typeof can be used for more granular type extraction directly inline.
 let anotherPersonName: typeof anotherPerson.name; // Type is string
 
 anotherPersonName = 'Alice'; // Valid
