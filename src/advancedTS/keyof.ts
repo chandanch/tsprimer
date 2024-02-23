@@ -19,7 +19,6 @@ type GilkerNumers = {
 };
 
 // using keyof operator for numeric keys or properties, this creates a new type of number
-
 type GilNumericKeyOf = keyof GilkerNumers;
 
 // using keyof operator for dynamic string key or properties, this creates a new type
