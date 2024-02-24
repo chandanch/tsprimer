@@ -1,5 +1,5 @@
 /**
- * keyof: The keyof operator returns a new tyoe which is a union of all the properties of a type
+ * keyof: The keyof operator returns a new type which is a union of all the properties of a type
  */
 
 type GilkerEvents = {
@@ -10,6 +10,8 @@ type GilkerEvents = {
 };
 
 // use of keyof operator which creates a new type
+// here the type of KeyGilkenEvents is a literal type which is union of all properties of type:
+//  name | eventId | category | covers
 type KeyGilkenEvents = keyof GilkerEvents;
 
 type GilkerNumers = {
