@@ -33,5 +33,7 @@ let anotherPerson = {
 // This shows how typeof can be used for more granular type extraction directly inline.
 let anotherPersonName: typeof anotherPerson.name; // Type is string
 
+let alicePersonAge: typeof anotherPerson.age;
+
 anotherPersonName = 'Alice'; // Valid
 // anotherPersonName = 42; // Error: Type 'number' is not assignable to type 'string'.
