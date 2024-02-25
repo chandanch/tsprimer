@@ -17,6 +17,8 @@ interface MilPerson {
  * [Key in keyof Person] loops over each property (name and age) in the Person interface.
  * ?: Person[Key] makes each property optional by adding ? after the property name.
  * Now, PartialPerson will be a type where all properties of Person are optional
+ * When you use keyof with a type, it generates a union type containing all the property names of that type.
+ * For instance, keyof Person produces a union type "name" | "age".
  */
 type PartialPerson = {
     [Key in keyof Person]?: Person[Key];
@@ -31,3 +33,21 @@ const partialPerson: PartialPerson = {};
 const partialPersonWithName: PartialPerson = { name: 'John' };
 
 const invalidPartialPerson = { name: 'John', age: 30 };
+
+// Making specific fields as required
+interface MilPAMProduct {
+    id: number;
+    name: string;
+    description: string;
+    category: string;
+}
+
+// Making specific  property as required: using the intersection operator
+type ProductUpdateRequest = {
+    [Key in keyof MilPAMProduct]?: MilPAMProduct[Key];
+} & { id: number };
+
+let milProductEdit: ProductUpdateRequest = {
+    id: 2,
+    name: '',
+};
