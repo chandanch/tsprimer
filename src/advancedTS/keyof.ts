@@ -10,8 +10,9 @@ type GilkerEvents = {
 };
 
 // use of keyof operator which creates a new type
-// here the type of KeyGilkenEvents is a literal type which is union of all properties of type:
-//  name | eventId | category | covers
+// here the type of KeyGilkenEvents is a literal type(name | eventId | category | covers)
+// which is union of all properties of type:
+
 type KeyGilkenEvents = keyof GilkerEvents;
 
 type GilkerNumers = {
