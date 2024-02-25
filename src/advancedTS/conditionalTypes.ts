@@ -20,3 +20,9 @@ interface MigManler extends HigManler {
 // use of conditional type to define type based on the condition
 // use the extends keyword to check if it extends a specific interface
 type HyManler = MigManler extends HigManler ? string : number;
+
+// use of conditional types with generics
+type isHopper<T> = T extends boolean ? boolean : string;
+
+let jigHopper: isHopper<boolean> = false;
+let kileHopper: isHopper<string> = 'fe';
