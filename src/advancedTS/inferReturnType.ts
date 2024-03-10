@@ -20,3 +20,5 @@ function getGimanDetails() {
 type FunctionReturnType<T> = T extends () => infer R ? R : T;
 
 type filanGil = FunctionReturnType<typeof getGimanDetails>;
+
+type jilanGil = FunctionReturnType<boolean>;
