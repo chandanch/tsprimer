@@ -16,6 +16,7 @@ type MillSquare = {
 type MillShape = MillCircle | MillSquare;
 
 const milCalculateArea = (shape: MillShape) => {
+    // use of in operator to check existence of a property
     if ('radius' in shape) {
         return shape.radius * 3.14;
     } else {
