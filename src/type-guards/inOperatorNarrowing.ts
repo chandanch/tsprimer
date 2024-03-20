@@ -24,9 +24,16 @@ const milCalculateArea = (shape: MillShape) => {
     }
 };
 
-const JiMillSquare: MillCircle = {
+const JiMillCircle: MillCircle = {
     kind: 'circle',
     radius: 34,
 };
 
-milCalculateArea(JiMillSquare);
+milCalculateArea(JiMillCircle);
+
+const JiMillSqaure: MillSquare = {
+    kind: 'square',
+    length: 3,
+};
+
+milCalculateArea(JiMillSqaure);
