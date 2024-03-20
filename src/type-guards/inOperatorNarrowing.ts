@@ -31,7 +31,7 @@ const JiMillCircle: MillCircle = {
 
 milCalculateArea(JiMillCircle);
 
-const JiMillSqaure: MillSquare = {
+const JiMillSqaure: MillShape = {
     kind: 'square',
     length: 3,
 };
