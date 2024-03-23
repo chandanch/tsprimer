@@ -12,12 +12,16 @@ abstract class HiProduct {
 }
 
 class HiElectronic extends HiProduct {
-    constructor(name: string, price: number, units: number) {
+    constructor(name: string, price: number, private units: number) {
         super(name, price);
     }
 
     calculateRewards(points: number): number {
         return points * 34 + this.price;
+    }
+
+    calculateTotalUnits(): number {
+        return this.units * 2;
     }
 }
 
@@ -32,5 +36,16 @@ class HiClothers extends HiProduct {
 
     getMaterailType(): string {
         return this.materialType;
+    }
+}
+
+function displayProductDetails(product: HiProduct) {
+    console.log(`Product Name: ${product.name}, Price: ${product.price}`);
+
+    // check if the product is instance of a specific class
+    if (product instanceof HiClothers) {
+        console.log(product.getMaterailType());
+    } else if (product instanceof HiElectronic) {
+        console.log(product.calculateTotalUnits());
     }
 }
