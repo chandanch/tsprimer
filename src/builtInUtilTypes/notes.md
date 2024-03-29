@@ -2,7 +2,7 @@
 
 Utility types are predefined generic types that can perform common type transformations in TypeScript. These types are built into TypeScript and are used to manipulate other types and create new types. Utility types can create new types by applying transformations to existing types. They are a powerful feature of TypeScript and help avoid code duplication and make it easier to write generic code.
 
-Some built-in Utility Types:
+Some built-in Utility
 
 Partial<T>- This type creates a new type that is a partial version of an existing type T. This means that all properties of T become optional. This is useful when working with interfaces that have many properties, but only some of them are required.
 
