@@ -21,7 +21,7 @@ interface MilPerson {
  * For instance, keyof Person produces a union type "name" | "age".
  */
 type PartialPerson = {
-    [Key in keyof Person]?: Person[Key];
+    [Key in keyof MilPerson]?: MilPerson[Key];
 };
 
 // using the `PartialPerson` type
