@@ -19,6 +19,8 @@ interface MilPerson {
  * Now, PartialPerson will be a type where all properties of Person are optional
  * When you use keyof with a type, it generates a union type containing all the property names of that type.
  * For instance, keyof Person produces a union type "name" | "age".
+ * MilPerson[Key]: This syntax accesses the type of the property in MilPerson that Key corresponds to.
+ * It effectively looks up the type of each property in the MilPerson interface by its key
  */
 type PartialPerson = {
     [Key in keyof MilPerson]?: MilPerson[Key];
