@@ -20,4 +20,6 @@ const filPrimers: Promise<GenericPrimers> = new Promise((resolve, reject) => {
     }, 1000);
 });
 
+// use of Awaited Type
+// obtain the type of the value that a Promise resolves to.
 type FilPrimers = Awaited<typeof filPrimers>;
