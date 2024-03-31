@@ -33,6 +33,8 @@ type FilRoles = 'admin' | 'editor' | 'viewer';
 
 type RoleFlags = Record<FilRoles, boolean>;
 
+// In this case, Roles is a union type of literal strings, and Record<Roles, boolean> ensures that for each of these roles,
+// you specify whether it's enabled (true) or not (false).
 const access: RoleFlags = {
     admin: true,
     editor: false,
