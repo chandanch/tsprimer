@@ -24,3 +24,17 @@ const users: UserNames = {
     c789: 'Charlie',
     // This structure ensures that every property is a string mapping to another string.
 };
+
+// If you know the keys ahead of time, for example,
+// a set of specific roles a user can have in an application, and you want to map each role to a boolean indicating whether it's enabled,
+// you can do the following:
+
+type FilRoles = 'admin' | 'editor' | 'viewer';
+
+type RoleFlags = Record<FilRoles, boolean>;
+
+const access: RoleFlags = {
+    admin: true,
+    editor: false,
+    viewer: true,
+};
