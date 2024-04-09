@@ -26,15 +26,17 @@ const users: UserNames = {
 };
 
 // If you know the keys ahead of time, for example,
-// a set of specific roles a user can have in an application, and you want to map each role to a boolean indicating whether it's enabled,
+// a set of specific roles a user can have in an application, and you want to map each role
+// to a boolean indicating whether it's enabled or disabled,
 // you can do the following:
 
 type FilRoles = 'admin' | 'editor' | 'viewer';
 
 type RoleFlags = Record<FilRoles, boolean>;
 
-// In this case, Roles is a union type of literal strings, and Record<Roles, boolean> ensures that for each of these roles,
-// you specify whether it's enabled (true) or not (false).
+// In this case, Roles is a union type of literal strings, and Record<Roles, boolean>
+// ensures that for each of these roles, you specify whether it's
+// enabled (true) or disabled (false).
 const access: RoleFlags = {
     admin: true,
     editor: false,
