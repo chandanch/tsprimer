@@ -15,3 +15,8 @@ interface JislManDetails {
 
 // creating a new type with all properties as optional using Partial utility type
 type PartailJisMan = Partial<JislManDetails>;
+
+const jislLogManDetails: PartailJisMan = {
+    name: 'Hiulan',
+    email: 'dj@45.cos',
+};
