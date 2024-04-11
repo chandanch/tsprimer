@@ -15,4 +15,5 @@ interface JilManDetails {
 }
 
 // here using the Omit type we omit the role, isFalcon and age properties
+// it creates a new type with only name and email properties
 type LimitedManDetails = Omit<JilManDetails, 'role' | 'isFalcon' | 'age'>;
