@@ -21,3 +21,8 @@ type HilernCity = 'gil falmor' | 'fameress' | 'Dama #de';
 
 // Converts the first character of the string literal to Uppercase
 type CaptilizeCaseGilimiCity = Capitalize<HilernCity>;
+
+type GilrilsCity = 'Daneem' | 'Fil Maneers' | 'uti Ione';
+
+// Converts the first character of the string literal to Uppercase
+type UncaptilizeCaseGilimiCity = Uncapitalize<GilrilsCity>;
