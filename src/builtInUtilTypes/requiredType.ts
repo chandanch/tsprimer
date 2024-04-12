@@ -18,3 +18,7 @@ interface FilGomUser {
 // creation of a new type using Required, all the optional properties in FilGomUser
 // is made as required in RequiredFilGomUser type
 type RequiredFilGomUser = Required<FilGomUser>;
+
+// use of combination of Pick and required
+// here we create a new type by picking email and name properties and make them as required
+type RegisteredFilGomUser = Required<Pick<FilGomUser, 'email' | 'name'>>;
